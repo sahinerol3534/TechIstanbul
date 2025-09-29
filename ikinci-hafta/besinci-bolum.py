@@ -431,10 +431,7 @@ else :
         # aldığı verileri gruplar halinde listeyen uygulamayı yazınız.
 
 """
-i = 0
-yazarlar = []
-kitaplar = []
-turler = []
+
 kitaplistesi = []
 while True:
     yazar = input("sevdiğiniz yazar adını giriniz. :")
@@ -450,6 +447,36 @@ for i in range(len(kitaplistesi)):
     print(f"{kitaplistesi[i][0]:20} {kitaplistesi[i][1]:20} {kitaplistesi[i][2]}")
 """
 
+
+kitaplistesi = []
+while True:
+    yazar = input("sevdiğiniz yazar adını giriniz. :")
+    if yazar == "":
+        break
+    kitap = input ("sevdiğniz yazara ait kitabı giriniz.: ")
+    kitapturu = input("kitap türünü giriniz.: ")
+    liste = {
+        "kitabinadi": kitap,
+         "kitabinyazari": yazar,
+         "kitabinturu": kitapturu     
+        }
+       
+    kitaplistesi.append(liste)
+print(kitaplistesi)
+print(f"{'kitap adı':20} {'yazarı':20} {'türü'}")
+for kitap in kitaplistesi:
+    print(f"{kitap["kitabinadi"]:20} {kitap["kitabinyazari"]:20} {kitap["kitabinturu"]}")
+print("*" * 50)
+for value in kitap.values():
+    print(value, end = ",   ")
+print()
+print("*" * 50)
+for key in kitap.keys():
+    print(key, end = ",   ")
+print()
+print("*" * 50)
+for key, value in kitap.items():
+        print(f"{key}: {value}")
     # 11. 2 den 1000'e kadar olan asal sayıları bulan ve yazdıran programı yazınız.
 """
 asal = []
